@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import ContainerApi from './entities/container-api.class';
+import { ContainerApi } from './entities';
 
 export class DockerApi {
   private readonly client: AxiosInstance;
@@ -12,3 +12,10 @@ export class DockerApi {
     this.container = new ContainerApi(this.client);
   }
 }
+export {
+  ContainerRemoveFlags,
+  ContainerListContainersQuery,
+  Container,
+  ContainerStatus,
+} from './types';
+export * from './entities';
